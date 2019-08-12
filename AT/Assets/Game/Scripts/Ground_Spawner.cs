@@ -19,7 +19,7 @@ public class Ground_Spawner : MonoBehaviour
     {
         if (timeBtwnSpawn <= 0)
         {
-            Instantiate(ground, transform.position, Quarternion.identity);
+            Instantiate(ground, transform.position, Quaternion.identity);
             timeBtwnSpawn = startTimeBtwnSpawn;
         }
         else

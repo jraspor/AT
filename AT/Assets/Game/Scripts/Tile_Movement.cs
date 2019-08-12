@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tile_Movement : MonoBehaviour{
+public class Tile_Movement : MonoBehaviour
+{
 
     public float speed;
 
-    void Start(){
-        
+    void Start()
+    {
+
     }
 
-    void Update(){
+    void Update()
+    {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
     }
 }

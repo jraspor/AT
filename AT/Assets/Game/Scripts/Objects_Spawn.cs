@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ground_Spawner : MonoBehaviour
+public class Objects_Spawn : MonoBehaviour
 {
-    public GameObject ground;
+    public GameObject thing;
 
     private float timeBtwnSpawn;
     public float startTimeBtwnSpawn;
+    private int rng;
 
     void Start()
     {
@@ -17,12 +18,16 @@ public class Ground_Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Random rnd = new Random();
+        rng = Random.Range(0, 5001);
         if (timeBtwnSpawn <= 0)
         {
-            
-            Instantiate(ground, transform.position, Quaternion.identity);
-            timeBtwnSpawn = startTimeBtwnSpawn;
+
+            if (rng < 10)
+            {
+                Instantiate(thing, transform.position, Quaternion.identity);
+                timeBtwnSpawn = startTimeBtwnSpawn;
+            }
         }
         else
         {

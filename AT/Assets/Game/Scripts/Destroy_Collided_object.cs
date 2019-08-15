@@ -18,10 +18,7 @@ public class Destroy_Collided_object : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        
-        if (col.gameObject.name == "Grass" || col.gameObject.name == "Grass(Clone)")
-        {
-            Destroy(col.gameObject);
-        }
+
+        Destroy(col.gameObject);
     }
 }

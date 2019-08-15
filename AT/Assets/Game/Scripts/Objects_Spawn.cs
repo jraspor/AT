@@ -20,6 +20,7 @@ public class Objects_Spawn : MonoBehaviour
     {
         //Random rnd = new Random();
         rng = Random.Range(0, 5001);
+        if (Stop_Start.animation == true)
         if (timeBtwnSpawn <= 0)
         {
 

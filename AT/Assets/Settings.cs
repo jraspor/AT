@@ -12,7 +12,7 @@ public class Settings : MonoBehaviour
     Resolution[] resolutions;
     public Dropdown resolutionDropdown;
 
-   /* private void Start()
+    private void Start()
     {
         resolutions = Screen.resolutions;
 
@@ -27,7 +27,7 @@ public class Settings : MonoBehaviour
         }
 
         resolutionDropdown.AddOptions(options);
-    }*/
+    }
 
     public void SetVolume(float volume)
     {
@@ -50,8 +50,8 @@ public class Settings : MonoBehaviour
         slider.value = 0;
     }
 
-   /* public void SetFullscreen (bool isFullscreen)
+    public void SetFullscreen (bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
-    } */
+    }
 }

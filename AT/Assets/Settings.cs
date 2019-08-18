@@ -21,4 +21,12 @@ public class Settings : MonoBehaviour
         slider = temp.GetComponent<Slider>();
         slider.value = -50;
     }
+    
+    public void SoundOn()
+    {
+        GameObject temp = GameObject.Find("Volume Slider");
+        audioMixer.SetFloat("volume", 0);
+        slider = temp.GetComponent<Slider>();
+        slider.value = 0;
+    }
 }

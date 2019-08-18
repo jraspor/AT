@@ -17,8 +17,10 @@ public class Ground_Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Stop_Start.animation == true)
         if (timeBtwnSpawn <= 0)
         {
+            
             Instantiate(ground, transform.position, Quaternion.identity);
             timeBtwnSpawn = startTimeBtwnSpawn;
         }

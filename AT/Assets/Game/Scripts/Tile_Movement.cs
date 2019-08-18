@@ -5,12 +5,14 @@ using UnityEngine;
 public class Tile_Movement : MonoBehaviour
 {
 
-    public float speed;
+    public static float speed = 2;
 
     void Start()
     {
 
     }
+
+
 
     void Update()
     {

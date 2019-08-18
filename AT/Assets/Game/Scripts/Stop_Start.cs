@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Stop_Start : MonoBehaviour
 {
-    public static bool animation = true;
+    public static bool animation = false;
 
     // Start is called before the first frame update
     void Start()

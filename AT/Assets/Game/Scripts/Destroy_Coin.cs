@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Destroy_Coin : MonoBehaviour
 {
+    public static bool stop = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class Destroy_Coin : MonoBehaviour
         if (col.gameObject.name == "Coin(Clone)")
         {
             Destroy(col.gameObject);
+            stop = true;
         }
     }
 }

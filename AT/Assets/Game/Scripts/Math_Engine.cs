@@ -32,6 +32,16 @@ public class Math_Engine : MonoBehaviour
     public Sprite seven;
     public Sprite eight;
     public Sprite nine;
+    public Sprite ten;
+    public Sprite eleven;
+    public Sprite twelve;
+    public Sprite thirteen;
+    public Sprite fourteen;
+    public Sprite fifteen;
+    public Sprite sixteen;
+    public Sprite seventeen;
+    public Sprite eighteen;
+       
 
     void give_num(SpriteRenderer number_object, int count) {
 
@@ -45,6 +55,16 @@ public class Math_Engine : MonoBehaviour
         if (count == 7) number_object.sprite = seven;
         if (count == 8) number_object.sprite = eight;
         if (count == 9) number_object.sprite = nine;
+        if (count == 10) number_object.sprite = ten;
+        if (count == 11) number_object.sprite = eleven;
+        if (count == 12) number_object.sprite = twelve;
+        if (count == 13) number_object.sprite = thirteen;
+        if (count == 14) number_object.sprite = fourteen;
+        if (count == 15) number_object.sprite = fifteen;
+        if (count == 16) number_object.sprite = sixteen;
+        if (count == 17) number_object.sprite = seventeen;
+        if (count == 18) number_object.sprite = eighteen;
+        
     }
 
     void update_game_numbers() {
@@ -79,9 +99,12 @@ public class Math_Engine : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
 
+        if (ans_check.clicked == true){
+            
+            update_game_numbers();
+        }
         
     }
 }

@@ -15,8 +15,9 @@ public class Coin_Spawn : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown("c"))
+        if (ans_check.clicked == true)
         {
+            ans_check.clicked = false;
             Instantiate(coin, transform.position, Quaternion.identity);
         }
         

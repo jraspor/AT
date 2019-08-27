@@ -17,19 +17,24 @@ public class Stop_Start : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space"))
+        if (Destroy_Coin.stop == true) animation = false;
+        if (ans_check.clicked == true){
+            Destroy_Coin.stop = false;
+            animation = true;
+        }
+
+        if (animation == false)
         {
             Tile_Movement.speed = 0;
-            animation = false;
-
+            
             stop.SetActive(true);
             go.SetActive(false);
         }
 
-        if (Input.GetKeyDown("return"))
+        if (animation == true)
         {
+            //ans_check.clicked = false;
             Tile_Movement.speed = 2;
-            animation = true;
 
             stop.SetActive(false);
             go.SetActive(true);

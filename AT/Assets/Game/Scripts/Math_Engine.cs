@@ -41,7 +41,11 @@ public class Math_Engine : MonoBehaviour
     public Sprite sixteen;
     public Sprite seventeen;
     public Sprite eighteen;
-       
+
+    public static int correct_nr;
+    private bool flag = false;
+
+    private int[] pool = {1, 2, 3};
 
     void give_num(SpriteRenderer number_object, int count) {
 
@@ -67,8 +71,27 @@ public class Math_Engine : MonoBehaviour
         
     }
 
-    void update_game_numbers() {
+    void reshuffle()
+    {
+        // Knuth shuffle algorithm :: courtesy of Wikipedia :)
+        for (int t = 0; t < pool.Length; t++)
+        {
+            int tmp = pool[t];
+            int r = Random.Range(t, pool.Length);
+            pool[t] = pool[r];
+            pool[r] = tmp;
+        }
 
+    }
+
+    IEnumerator update_game_numbers() {
+
+        if (flag == false){ 
+
+            yield return new WaitForSeconds(2);
+            flag = true;
+        }
+        else yield return new WaitForSeconds(8f);
         n1 = Random.Range(0, 10);
         n2 = Random.Range(0, 10);
         ans = n1 + n2;
@@ -85,25 +108,36 @@ public class Math_Engine : MonoBehaviour
         give_num(num1, n1);
         give_num(num2, n2);
 
+        
         //treba randomizirat odgovore, tocno je uvijek u sredini
-        give_num(ans1, fake1);
-        give_num(ans2, ans);
-        give_num(ans3, fake2);
+        pool[0] = fake1;
+        pool[1] = ans;
+        pool[2] = fake2;
 
+        reshuffle();
+
+        give_num(ans1, pool[0]);
+        give_num(ans2, pool[1]);
+        give_num(ans3, pool[2]);
+
+        if (pool[0] == ans) correct_nr = 1;
+        if (pool[1] == ans) correct_nr = 2;
+        if (pool[2] == ans) correct_nr = 3;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        update_game_numbers();
+        StartCoroutine(update_game_numbers());
     }
 
     // Update is called once per frame
     void Update(){
 
         if (ans_check.clicked == true){
+
+            StartCoroutine(update_game_numbers());
             
-            update_game_numbers();
         }
         
     }

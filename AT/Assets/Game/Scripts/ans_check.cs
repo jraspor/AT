@@ -6,6 +6,7 @@ public class ans_check : MonoBehaviour
 {
     public static bool clicked = false;
     // Start is called before the first frame update
+    
     void Start()
     {
         
@@ -19,6 +20,21 @@ public class ans_check : MonoBehaviour
 
     void OnMouseDown()
     {
-        clicked = true;
+        var name = transform.name;
+
+        if (name == "ans1" && Math_Engine.correct_nr == 1){
+            clicked = true;
+            Math_Engine.correct_nr = 0;
+        }
+        if(name == "ans2" && Math_Engine.correct_nr == 2){
+            clicked = true;
+            Math_Engine.correct_nr = 0;
+        }
+        if (name == "ans3" && Math_Engine.correct_nr == 3){
+            clicked = true;
+            Math_Engine.correct_nr = 0;
+        }
+
+
     }
 }

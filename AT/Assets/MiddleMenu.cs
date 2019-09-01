@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MiddleMenu : MonoBehaviour
 {
-    public int goal = 0;
+    public static int goal = 0;
 
     public void Three()
     {

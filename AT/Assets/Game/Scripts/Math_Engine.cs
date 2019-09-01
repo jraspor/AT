@@ -44,6 +44,7 @@ public class Math_Engine : MonoBehaviour
 
     public static int correct_nr;
     private bool flag = false;
+    private int number_of_correct_ans = 0;
 
     private int[] pool = {1, 2, 3};
 
@@ -86,8 +87,8 @@ public class Math_Engine : MonoBehaviour
 
     IEnumerator update_game_numbers() {
 
-        if (flag == false){ 
-
+        if (flag == false){
+            
             yield return new WaitForSeconds(2);
             flag = true;
         }
@@ -136,7 +137,12 @@ public class Math_Engine : MonoBehaviour
 
         if (ans_check.clicked == true){
 
-            StartCoroutine(update_game_numbers());
+            
+            number_of_correct_ans++;
+            if (number_of_correct_ans == MiddleMenu.goal) {
+                //PREBACI NA HOME SCREEN
+            }
+            else StartCoroutine(update_game_numbers());
             
         }
         

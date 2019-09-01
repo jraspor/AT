@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: e1a237238c2d31d40b3e025a6641478e
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6562572897494136175
+    second: answer nums_0
+  - first:
+      213: 2353529341592629262
+    second: answer nums_1
+  - first:
+      213: -7385405491792472863
+    second: answer nums_2
+  - first:
+      213: -4550811576102895730
+    second: answer nums_3
+  - first:
+      213: -7191326550982180422
+    second: answer nums_4
+  - first:
+      213: -706264954596683691
+    second: answer nums_5
+  - first:
+      213: 6369703498280275362
+    second: answer nums_6
+  - first:
+      213: -946969313591026122
+    second: answer nums_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +64,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +94,201 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: answer nums_0
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 496
+        width: 303
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06717bc19fed2c747a3fd801c25b2712
+      internalID: -6562572897494136175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: answer nums_1
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 494
+        width: 303
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4debfae1654756b47bf6bfdebaed3933
+      internalID: 2353529341592629262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: answer nums_2
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 504
+        width: 303
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91fb2e486188da249b8e74f13a115eba
+      internalID: -7385405491792472863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: answer nums_3
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 501
+        width: 303
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13bc4fc8c374bd34eae4185812702018
+      internalID: -4550811576102895730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: answer nums_4
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 120
+        width: 303
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc823a3cf6f28f438e8de15dd7e550e
+      internalID: -7191326550982180422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: answer nums_5
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 126
+        width: 303
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb8007d80d1a24149bafdcb517346088
+      internalID: -706264954596683691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: answer nums_6
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 126
+        width: 303
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa09b3f43fb58d478b882d6e9ddc30c
+      internalID: 6369703498280275362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: answer nums_7
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 117
+        width: 303
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3c725ae8e129a498a8302a0dfcd2b4
+      internalID: -946969313591026122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

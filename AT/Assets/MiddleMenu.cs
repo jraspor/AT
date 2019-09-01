@@ -5,8 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class MiddleMenu : MonoBehaviour
 {
-    public void PlayGame()
+    public int goal = 0;
+
+    public void Three()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        goal = 3;
+    }
+
+    public void Six()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        goal = 6;
+    }
+
+    public void Nine()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        goal = 9;
     }
 }

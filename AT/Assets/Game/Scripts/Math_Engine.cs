@@ -13,6 +13,14 @@ public class Math_Engine : MonoBehaviour
     public SpriteRenderer ans2;
     public SpriteRenderer ans3;
 
+    public SpriteRenderer plus_sign;
+    public SpriteRenderer equal_sign;
+    public SpriteRenderer question_mark;
+
+    public Sprite plus;
+    public Sprite equal;
+    public Sprite qm;
+
     public GameObject ans1_object;
     public GameObject ans2_object;
     public GameObject ans3_object;
@@ -92,8 +100,17 @@ public class Math_Engine : MonoBehaviour
             
             yield return new WaitForSeconds(2);
             flag = true;
+            plus_sign.sprite = plus;
+            equal_sign.sprite = equal;
+            question_mark.sprite = qm;
+
         }
         else yield return new WaitForSeconds(8f);
+
+        if (number_of_correct_ans == MiddleMenu.goal){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        }
+
         n1 = Random.Range(0, 10);
         n2 = Random.Range(0, 10);
         ans = n1 + n2;
@@ -140,10 +157,8 @@ public class Math_Engine : MonoBehaviour
 
             
             number_of_correct_ans++;
-            if (number_of_correct_ans == MiddleMenu.goal) {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
-            }
-            else StartCoroutine(update_game_numbers());
+            
+            StartCoroutine(update_game_numbers());
             
         }
         

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Math_Engine : MonoBehaviour
 {
@@ -140,7 +141,7 @@ public class Math_Engine : MonoBehaviour
             
             number_of_correct_ans++;
             if (number_of_correct_ans == MiddleMenu.goal) {
-                //PREBACI NA HOME SCREEN
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
             }
             else StartCoroutine(update_game_numbers());
             

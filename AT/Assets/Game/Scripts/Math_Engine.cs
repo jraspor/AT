@@ -52,8 +52,14 @@ public class Math_Engine : MonoBehaviour
     public Sprite seventeen;
     public Sprite eighteen;
 
+    public Sprite count_one;
+    public Sprite count_two;
+    
+
     public GameObject return_pop_up;
     public GameObject replay_pop_up;
+    public GameObject count_object;
+    public SpriteRenderer count;
 
     public static int correct_nr;
     private bool flag = false;
@@ -101,8 +107,18 @@ public class Math_Engine : MonoBehaviour
     IEnumerator update_game_numbers() {
 
         if (flag == false){
-            
-            yield return new WaitForSeconds(2);
+            ans1_object.SetActive(false);
+            ans2_object.SetActive(false);
+            ans3_object.SetActive(false);
+            yield return new WaitForSeconds(1);
+            count.sprite = count_two;
+            yield return new WaitForSeconds(1);
+            count.sprite = count_one;
+            yield return new WaitForSeconds(1);
+            count_object.SetActive(false);
+            ans1_object.SetActive(true);
+            ans2_object.SetActive(true);
+            ans3_object.SetActive(true);
             flag = true;
             plus_sign.sprite = plus;
             equal_sign.sprite = equal;

@@ -9,10 +9,12 @@ public class Objects_Spawn : MonoBehaviour
     private float timeBtwnSpawn;
     public float startTimeBtwnSpawn;
     private int rng;
-
+    private int counter;
+    private int flag;
     void Start()
     {
-
+        counter = 0;
+        flag = 0;
     }
 
     // Update is called once per frame
@@ -23,12 +25,15 @@ public class Objects_Spawn : MonoBehaviour
         if (Stop_Start.animation == true)
         if (timeBtwnSpawn <= 0)
         {
-
-            if (rng < 10)
+            counter++;
+            if (rng < 10 && flag == 0)
             {
+                    flag = 1;
                 Instantiate(thing, transform.position, Quaternion.identity);
                 timeBtwnSpawn = startTimeBtwnSpawn;
             }
+
+                if (counter > 1000) flag = 0;
         }
         else
         {

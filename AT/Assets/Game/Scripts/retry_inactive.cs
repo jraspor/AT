@@ -3,8 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+
+
 public class retry_inactive : MonoBehaviour
 {
+
+    private float timer_count = 140.0f;
+    private float timer = 0.0f;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +25,18 @@ public class retry_inactive : MonoBehaviour
         
     }
 
-    void OnMouseDown()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    void OnMouseOver(){
+        timer++;
+        Debug.Log("timer: " + timer);
+        if (timer > timer_count){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        }
 
     }
+
+    void OnMouseExit(){
+        timer = 0;
+    }
+
 
 }

@@ -52,10 +52,12 @@ public class Math_Engine : MonoBehaviour
     public Sprite seventeen;
     public Sprite eighteen;
 
+    public GameObject return_pop_up;
+
     public static int correct_nr;
     private bool flag = false;
     private int number_of_correct_ans = 0;
-
+    private bool end_flag = false;
     private int[] pool = {1, 2, 3};
 
     void give_num(SpriteRenderer number_object, int count) {
@@ -109,8 +111,18 @@ public class Math_Engine : MonoBehaviour
         else yield return new WaitForSeconds(8f);
 
         if (number_of_correct_ans == MiddleMenu.goal){
-            //skaci
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+            plus_sign.sprite = null;
+            equal_sign.sprite = null;
+            question_mark.sprite = null;
+            num1.sprite = null;
+            num2.sprite = null;
+            ans1.sprite = null;
+            ans2.sprite = null;
+            ans3.sprite = null;
+            end_flag = true;
+            return_pop_up.SetActive(true);
+
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
         }
 
         n1 = Random.Range(0, 10);
@@ -125,9 +137,8 @@ public class Math_Engine : MonoBehaviour
             fake1 = Random.Range(0, 19);
             fake2 = Random.Range(0, 19);
         }
-
-        give_num(num1, n1);
-        give_num(num2, n2);
+        
+        
 
         
         //treba randomizirat odgovore, tocno je uvijek u sredini
@@ -136,10 +147,13 @@ public class Math_Engine : MonoBehaviour
         pool[2] = fake2;
 
         reshuffle();
-
+        if(end_flag == false) { 
+        give_num(num1, n1);
+        give_num(num2, n2);
         give_num(ans1, pool[0]);
         give_num(ans2, pool[1]);
         give_num(ans3, pool[2]);
+        }
 
         if (pool[0] == ans) correct_nr = 1;
         if (pool[1] == ans) correct_nr = 2;

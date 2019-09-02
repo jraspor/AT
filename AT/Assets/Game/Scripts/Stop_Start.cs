@@ -7,6 +7,8 @@ public class Stop_Start : MonoBehaviour
     public static bool animation = false;
     public GameObject stop;
     public GameObject go;
+    public GameObject player;
+    private int t = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,9 +28,14 @@ public class Stop_Start : MonoBehaviour
         if (animation == false)
         {
             Tile_Movement.speed = 0;
-            
+           
             stop.SetActive(true);
             go.SetActive(false);
+           
+           
+            
+            
+
         }
 
         if (animation == true)
@@ -39,6 +46,8 @@ public class Stop_Start : MonoBehaviour
             stop.SetActive(false);
             go.SetActive(true);
         }
+
+        
 
     }
 }

@@ -7,8 +7,8 @@ public class Math_Engine : MonoBehaviour
 {
     public SpriteRenderer num1;
     public SpriteRenderer num2;
-    public SpriteRenderer equ1;
-    public SpriteRenderer equ2;
+    /*public SpriteRenderer equ1;
+    public SpriteRenderer equ2;*/
     public SpriteRenderer ans1;
     public SpriteRenderer ans2;
     public SpriteRenderer ans3;
@@ -24,6 +24,7 @@ public class Math_Engine : MonoBehaviour
     public GameObject ans1_object;
     public GameObject ans2_object;
     public GameObject ans3_object;
+
 
     private int n1;
     private int n2;
@@ -108,6 +109,7 @@ public class Math_Engine : MonoBehaviour
         else yield return new WaitForSeconds(8f);
 
         if (number_of_correct_ans == MiddleMenu.goal){
+            //skaci
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
         }
 

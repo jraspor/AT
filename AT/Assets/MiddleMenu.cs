@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MiddleMenu : MonoBehaviour
+public class MiddleMenu2 : MonoBehaviour
 {
     public static int goal = 0;
 

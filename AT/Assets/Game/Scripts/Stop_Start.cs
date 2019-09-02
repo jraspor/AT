@@ -8,7 +8,7 @@ public class Stop_Start : MonoBehaviour
     public GameObject stop;
     public GameObject go;
     public GameObject player;
-    private int t = 0;
+    
     // Start is called before the first frame update
     void Start()
     {

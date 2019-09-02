@@ -53,6 +53,7 @@ public class Math_Engine : MonoBehaviour
     public Sprite eighteen;
 
     public GameObject return_pop_up;
+    public GameObject replay_pop_up;
 
     public static int correct_nr;
     private bool flag = false;
@@ -121,7 +122,11 @@ public class Math_Engine : MonoBehaviour
             ans3.sprite = null;
             end_flag = true;
             return_pop_up.SetActive(true);
+            replay_pop_up.SetActive(true);
 
+            ans1_object.SetActive(false);
+            ans2_object.SetActive(false);
+            ans3_object.SetActive(false);
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
         }
 
